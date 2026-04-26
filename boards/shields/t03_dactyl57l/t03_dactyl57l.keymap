@@ -20,8 +20,8 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <3000>;
-            bindings = <&to>, <&none>;
-            display-name = "Base Layer Hold Switch";
+            bindings = <&to>, <&kp>;
+            display-name = "Layer Switch / Shift Tap";
         };
 
         spc_shift: space_shift {
@@ -51,7 +51,7 @@
             bindings = <
             // ------------------------------------- 左手 (7列) ---------------------        ------------------------------------- 右手 (7列) -------------------------------------
             &kp GRAVE               &kp Q      &kp N0     &kp N1     &kp N2                 &kp N3    &kp N4         &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp SEMI  &kp SQT
-            &base_to_hold BASE 0    &kp A      &kp W      &kp E      &kp R                  &kp T     &kp TAB        &kp BSLH  &kp Y     &kp U     &kp I     &kp O     &kp P     &kp MINUS
+            &base_to_hold BASE LSHIFT &kp A      &kp W      &kp E      &kp R                &kp T     &kp TAB        &kp BSLH  &kp Y     &kp U     &kp I     &kp O     &kp P     &kp MINUS
             &kp LALT                &kp Z      &kp S      &kp D      &kp F                  &kp G     &mo FN         &mo FN    &kp H     &kp J     &kp K     &kp L     &kp FSLH  &kp EQUAL
             &kp HOME                &kp PG_UP  &kp X      &kp C      &kp V                  &kp B     &kp ESC        &kp DEL   &kp N     &kp M     &kp COMMA &kp DOT   &kp UP    &kp DOWN
             &kp END                 &kp PG_DN  &none      &none      &spc_shift LSHIFT SPACE &kp CAPS  &kp LGUI      &kp RSHFT &lt FN RET &kp BSPC  &kp LBKT  &kp RBKT  &kp LEFT  &kp RIGHT
@@ -63,7 +63,7 @@
             bindings = <
             // ------------------------------------- 左手 (7列) ---------------------        ------------------------------------- 右手 (7列) -------------------------------------
             &kp GRAVE                     &kp Q      &kp N0     &kp N1     &kp N2      &kp N3    &kp N4         &kp N5    &kp N6    &kp N7    &kp N8    &kp N9    &kp SEMI  &kp SQT
-            &base_to_hold SPACE_SHIFT 0   &kp A      &kp W      &kp E      &kp R       &kp T     &kp TAB        &kp BSLH  &kp Y     &kp U     &kp I     &kp O     &kp P     &kp MINUS
+            &base_to_hold SPACE_SHIFT LSHIFT &kp A      &kp W      &kp E      &kp R    &kp T     &kp TAB        &kp BSLH  &kp Y     &kp U     &kp I     &kp O     &kp P     &kp MINUS
             &kp LALT                      &kp Z      &kp S      &kp D      &kp F       &kp G     &mo FN         &mo FN    &kp H     &kp J     &kp K     &kp L     &kp FSLH  &kp EQUAL
             &kp HOME                      &kp PG_UP  &kp X      &kp C      &kp V       &kp B     &kp ESC        &kp DEL   &kp N     &kp M     &kp COMMA &kp DOT   &kp UP    &kp DOWN
             &kp END                       &kp PG_DN  &none      &none      &kp SPACE   &kp CAPS  &kp LGUI       &kp RSHFT &lt FN RET &kp BSPC  &kp LBKT  &kp RBKT  &kp LEFT  &kp RIGHT
