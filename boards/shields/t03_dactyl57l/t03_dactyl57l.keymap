@@ -51,6 +51,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_mouse_layer {
+            timeout-ms = <50>;
+            key-positions = <60 65>;
+            bindings = <&tog MOUSE>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -86,7 +96,7 @@
             &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
             &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
             &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
-            &trans     &trans     &trans     &trans     &mo MOUSE &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
+            &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
             >;
         };
 
