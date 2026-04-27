@@ -19,11 +19,6 @@
             , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan>;
-    };
-
     default_transform: default_transform {
         compatible = "zmk,matrix-transform";
         columns = <14>; // 左半边 7 列 + 右半边 7 列
