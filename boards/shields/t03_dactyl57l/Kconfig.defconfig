@@ -1,7 +1,7 @@
 if SHIELD_T03_DACTYL57L_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "text03 dactyl kb"
+    default "text03 dactyl"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
