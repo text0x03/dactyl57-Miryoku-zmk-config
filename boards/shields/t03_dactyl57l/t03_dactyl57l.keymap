@@ -7,21 +7,11 @@
 
 #define SPACE_SHIFT 0
 #define BASE 1
-#define FN_TRIGGER 2
-#define FN 3
-#define MOUSE 4
+#define FN 2
+#define MOUSE 3
 
 // 定义宏处理 00
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        fn_trigger_enables_fn {
-            if-layers = <FN_TRIGGER>;
-            then-layer = <FN>;
-        };
-    };
-
     behaviors {
         base_to_hold: base_to_hold {
             compatible = "zmk,behavior-hold-tap";
@@ -72,7 +62,7 @@
             &kp LSHIFT              &kp A      &kp W      &kp E      &kp R                  &kp T     &kp TAB        &kp BSLH  &kp Y     &kp U     &kp I     &kp O     &kp P     &kp EQUAL
             &kp LALT                &kp Z      &kp S      &kp D      &kp F                  &kp G     &mo FN         &mo FN    &kp H     &kp J     &kp K     &kp L     &kp FSLH  &kp MINUS
             &kp HOME                &kp PG_UP  &kp X      &kp C      &kp V                  &kp B     &kp ESC        &kp DEL   &kp N     &kp M     &kp COMMA &kp DOT   &kp UP    &kp DOWN
-            &kp END                 &kp PG_DN  &none      &none      &spc_shift LSHIFT SPACE &kp CAPS  &kp LGUI      &base_to_hold BASE RSHIFT &lt FN_TRIGGER RET &kp BSPC  &kp LBKT  &kp RBKT  &kp LEFT  &kp RIGHT
+            &kp END                 &kp PG_DN  &none      &none      &spc_shift LSHIFT SPACE &kp CAPS  &kp LGUI      &base_to_hold BASE RSHIFT &lt FN RET &kp BSPC  &kp LBKT  &kp RBKT  &kp LEFT  &kp RIGHT
             >;
         };
 
@@ -88,19 +78,7 @@
             >;
         };
 
-        // 第 2 层：默认层 FN+空格触发层 (FN Mouse Trigger Layer)
-        fn_trigger_layer {
-            bindings = <
-            // ------------------------------------- 左手 (7列) ---------------------------     ------------------------------------- 右手 (7列) -------------------
-            &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
-            &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
-            &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
-            &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
-            &trans     &trans     &trans     &trans     &trans    &trans            &trans      &trans    &trans    &trans    &trans    &trans    &trans    &trans
-            >;
-        };
-
-        // 第 3 层：功能/小键盘层 (FN Layer)
+        // 第 2 层：功能/小键盘层 (FN Layer)
         fn_layer {
             bindings = <
             // ------------------------------------- 左手 (7列) ---------------------------     ------------------------------------- 右手 (7列) -------------------
@@ -112,7 +90,7 @@
             >;
         };
 
-        // 第 4 层：鼠标/导航层 (Mouse/Nav Layer)
+        // 第 3 层：鼠标/导航层 (Mouse/Nav Layer)
         mouse_layer {
             bindings = <
             // ------------------------------------- 左手 (7列) ---------------------------     ------------------------------------- 右手 (7列) -------------------
