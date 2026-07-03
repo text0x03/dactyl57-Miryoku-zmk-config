@@ -38,13 +38,13 @@
                &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans
 
             // N10      K11        K12      K13      K14       K15      K16          K17      K18      K19      K1A      K1B      K1C      N1D
-               &trans   &kp LGUI   &trans   &trans   &trans    &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans
+               &trans   &kp LGUI   &trans   &trans   &trans    &trans   &trans      &trans   &trans   &trans   &trans   &trans   &kp RIGHT   &trans
 
             // N20      K21      K22       K23        K24         K25      N26          N27      K28       K29       K2A       K2B       K2C       N2D
-               &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHIFT  &trans   &trans      &trans   &kp CAPS  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
+               &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHIFT  &trans   &trans      &trans   &kp CAPS  &kp LEFT  &kp DOWN  &kp UP    &kp END &trans
 
             // N30      N31      K32      K33      K34      K35      N36          N37      K38      K39      K3A         K3B          K2C      N3D
-               &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &kp INS  &kp HOME &kp PG_UP   &kp PG_DN    &kp END  &trans
+               &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &kp INS  &kp HOME &kp PG_UP   &kp PG_DN    &trans  &trans
 
             // N40      N41      N42      N43      K44      K45      N46          N47      K48      K49      N4A      N4B      N4C      N4D
                &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &kp DEL  &kp BSPC &trans   &trans   &trans   &trans
