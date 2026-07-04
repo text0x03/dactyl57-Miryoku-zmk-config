@@ -8,6 +8,7 @@
 #define FUN   4
 #define MEDIA 5
 #define MOUSE 6
+#define GAME  7
 
 / {
 
@@ -59,6 +60,14 @@
                 56 57 58 59 60 61 62
             >;
             hold-trigger-on-release;
+        };
+    };
+
+    macros {
+        game_esc_base: game_esc_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &to BASE>;
         };
     };
 
@@ -115,7 +124,7 @@
                &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHIFT  &trans   &trans      &trans   &kp RBKT  &kp N1   &kp N2   &kp N3   &kp MINUS  &trans
 
             // N30      N31      K32      K33      K34       K35      N36          N37      K38      K39      K3A      K3B      N3C      N3D
-               &trans   &trans   &trans   &trans   &mo NAV   &trans   &trans      &trans   &kp N0   &kp N7   &kp N8   &kp N9   &trans   &trans
+               &trans   &trans   &trans   &trans   &mo NAV   &trans   &to GAME    &trans   &kp N0   &kp N7   &kp N8   &kp N9   &trans   &trans
 
             // N40      N41      N42      N43      K44      K45      N46          N47      K48       K49      N4A      N4B      N4C      N4D
                &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &kp GRAVE &kp BSPC &trans   &trans   &trans   &trans
@@ -159,6 +168,25 @@
                &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans
                &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans
                &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans
+            >;
+        };
+
+        game_layer {
+            bindings = <
+            // N00      N01      N02      N03      N04      N05      N06          N07      N08      N09      N0A      N0B      N0C      N0D
+               &kp GRAVE   &kp Q      &kp N0   &kp N1   &kp N2   &kp N3   &kp N4        &kp N5    &kp N6   &kp N7   &kp N8   &kp N9   &kp SEMI  &kp SQT
+
+            // N10      N11      N12      N13      N14      N15      N16          N17      N18      N19      N1A      N1B      N1C      N1D
+               &kp LSHIFT  &kp A      &kp W    &kp E    &kp R    &kp T    &kp TAB       &kp BSLH  &kp Y    &kp U    &kp I    &kp O    &kp P     &kp EQUAL
+
+            // N20      N21      N22      N23      N24      N25      N26          N27      N28      N29      N2A      N2B      N2C      N2D
+               &kp LALT    &kp Z      &kp S    &kp D    &kp F    &kp G    &mo FUN       &mo FUN   &kp H    &kp J    &kp K    &kp L    &kp FSLH  &kp MINUS
+
+            // N30      N31      N32      N33      N34      N35      N36          N37      N38      N39      N3A      N3B      N3C      N3D
+               &kp HOME    &kp PG_UP  &kp X    &kp C    &kp V    &kp B    &game_esc_base &kp DEL  &kp N    &kp M    &kp COMMA &kp DOT  &kp UP    &kp DOWN
+
+            // N40      N41      N42      N43      N44      N45      N46          N47      N48      N49      N4A      N4B      N4C      N4D
+               &kp END     &kp PG_DN  &none    &none    &kp SPACE &kp CAPS &kp LGUI      &kp RSHIFT &lt FUN RET &kp BSPC &kp LBKT &kp RBKT &kp LEFT  &kp RIGHT
             >;
         };
     };
