@@ -25,7 +25,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <320>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -71,10 +71,10 @@
                &none    &kp Q          &none    &none    &none    &none    &none         &none        &none    &none    &none    &none    &kp SEMI  &none
 
             // N10      K11            K12      K13      K14      K15      K16           K17          K18      K19      K1A      K1B      K1C       N1D
-               &none    &kp A           &kp W    &kp E    &kp R    &kp T    &lt MEDIA TAB &lt FUN BSLH &kp Y    &kp U    &kp I    &kp O    &hmr RGUI P &none
+               &none    &hml LGUI A           &kp W    &kp E    &kp R    &kp T    &lt MEDIA TAB &lt FUN BSLH &kp Y    &kp U    &kp I    &kp O    &hmr RGUI P &none
 
             // N20      K21            K22          K23           K24            K25      N26          N27          K28      K29            K2A           K2B          K2C             N2D
-               &none    &hml LGUI Z     &hml LALT S   &hml LCTRL D   &hml LSHIFT F   &kp G    &none        &none        &kp H    &hmr RSHIFT J   &hmr RCTRL K   &hmr RALT L   &hmr RGUI FSLH   &none
+               &none    &kp Z     &hml LALT S   &hml LCTRL D   &hml LSHIFT F   &kp G    &none        &none        &kp H    &hmr RSHIFT J   &hmr RCTRL K   &hmr RALT L   &hmr RGUI FSLH   &none
 
             // N30      N31            K32      K33      K34      K35      N36           N37          K38      K39      K3A        K3B      N3C       N3D
                &none    &none          &kp X    &kp C    &kp V    &kp B    &none         &none        &kp N    &kp M    &kp COMMA  &kp DOT  &none     &none
@@ -106,16 +106,16 @@
         num_layer {
             bindings = <
             // N00      K01      N02      N03      N04      N05      N06          N07      N08      N09      N0A      N0B      K0C       N0D
-               &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &kp SQT   &trans
+               &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &kp N7   &kp N8   &kp N9   &kp SQT   &trans
 
             // N10      K11        K12      K13      K14      K15      K16          K17      K18       K19      K1A      K1B      K1C        N1D
-               &trans   &kp LGUI   &trans   &trans   &trans   &trans   &trans      &kp BSLH  &kp LBKT  &kp N7   &kp N8   &kp N9   &kp EQUAL  &trans
+               &trans   &kp LGUI   &trans   &trans   &trans   &trans   &trans      &kp BSLH  &kp LBKT  &kp N4   &kp N5   &kp N6   &kp EQUAL  &trans
 
             // N20      K21      K22       K23        K24         K25      N26          N27      K28       K29      K2A      K2B      K2C        N2D
-               &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHIFT  &trans   &trans      &trans   &kp RBKT  &kp N4   &kp N5   &kp N6   &kp MINUS  &trans
+               &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHIFT  &trans   &trans      &trans   &kp RBKT  &kp N1   &kp N2   &kp N3   &kp MINUS  &trans
 
             // N30      N31      K32      K33      K34       K35      N36          N37      K38      K39      K3A      K3B      N3C      N3D
-               &trans   &trans   &trans   &trans   &mo NAV   &trans   &trans      &trans   &kp N0   &kp N1   &kp N2   &kp N3   &trans   &trans
+               &trans   &trans   &trans   &trans   &mo NAV   &trans   &trans      &trans   &kp N0   &kp N7   &kp N8   &kp N9   &trans   &trans
 
             // N40      N41      N42      N43      K44      K45      N46          N47      K48       K49      N4A      N4B      N4C      N4D
                &trans   &trans   &trans   &trans   &trans   &trans   &trans      &trans   &kp GRAVE &kp BSPC &trans   &trans   &trans   &trans
