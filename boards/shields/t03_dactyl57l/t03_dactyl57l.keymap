@@ -13,6 +13,17 @@
 / {
 
     behaviors {
+        /* Dedicated Enter: no quick-tap repeat or prior-idle tap forcing. */
+        enter_lt: enter_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <0>;
+            bindings = <&mo>, <&enter_once>;
+        };
+
         /*
          * Home-row mods tuned for rolling typing.
          *
@@ -64,6 +75,15 @@
     };
 
     macros {
+        /* A complete Enter pulse, independent of the physical key release. */
+        enter_once: enter_once {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <10>;
+            bindings = <&macro_tap &kp RET>;
+        };
+
         game_esc_base: game_esc_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -89,7 +109,7 @@
                &none    &none          &kp X    &kp C    &kp V    &kp B    &none         &none        &kp N    &kp M    &kp COMMA  &kp DOT  &none     &none
 
             // N40      N41            N42      N43      K44             K45           N46          N47          K48           K49              N4A      N4B      N4C      N4D
-               &none    &none          &none    &none    &lt NUM SPACE   &lt NAV ESC   &none        &none        &lt SYM RET   &lt MOUSE BSPC   &none    &none    &none    &none
+               &none    &none          &none    &none    &lt NUM SPACE   &lt NAV ESC   &none        &none        &enter_lt SYM 0   &lt MOUSE BSPC   &none    &none    &none    &none
             >;
         };
 
@@ -186,7 +206,7 @@
                &kp HOME    &kp PG_UP  &kp X    &kp C    &kp V    &kp B    &game_esc_base &kp DEL  &kp N    &kp M    &kp COMMA &kp DOT  &kp UP    &kp DOWN
 
             // N40      N41      N42      N43      N44      N45      N46          N47      N48      N49      N4A      N4B      N4C      N4D
-               &kp END     &kp PG_DN  &none    &none    &kp SPACE &kp CAPS &kp LGUI      &kp RSHIFT &lt FUN RET &kp BSPC &kp LBKT &kp RBKT &kp LEFT  &kp RIGHT
+               &kp END     &kp PG_DN  &none    &none    &kp SPACE &kp CAPS &kp LGUI      &kp RSHIFT &enter_lt FUN 0 &kp BSPC &kp LBKT &kp RBKT &kp LEFT  &kp RIGHT
             >;
         };
     };
