@@ -106,10 +106,10 @@
                &none    &kp Z     &hml LALT S   &hml LCTRL D   &hml LSHIFT F   &kp G    &none        &none        &kp H    &hmr RSHIFT J   &hmr RCTRL K   &hmr RALT L   &hmr RGUI FSLH   &none
 
             // N30      N31            K32      K33      K34      K35      N36           N37          K38      K39      K3A        K3B      N3C       N3D
-               &none    &none          &kp X    &kp C    &kp V    &kp B    &none         &none        &kp N    &kp M    &kp COMMA  &kp DOT  &none     &none
+               &none    &none          &kp X    &kp C    &kp V    &kp B    &none         &none        &kp N    &kp M    &kp COMMA  &kp DOT  &kp UP     &kp DOWN
 
             // N40      N41            N42      N43      K44             K45           N46          N47          K48           K49              N4A      N4B      N4C      N4D
-               &none    &none          &none    &none    &lt NUM SPACE   &lt NAV ESC   &none        &none        &enter_lt SYM 0   &lt MOUSE BSPC   &none    &none    &none    &none
+               &none    &none          &none    &none    &lt NUM SPACE   &lt NAV ESC   &none        &none        &enter_lt SYM 0   &lt MOUSE BSPC   &none    &none    &kp LEFT    &kp RIGHT
             >;
         };
 

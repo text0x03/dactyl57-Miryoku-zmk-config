@@ -13,6 +13,17 @@
 | 中间偏左 Tab（K16） | Tab | MEDIA 媒体层 |
 | 中间偏右反斜杠（K17） | `\` | FUN 功能层 |
 
+基础层可直接使用方向键，位置与 GAME 层完全相同，无需按住层键。按住方向键可连续移动。
+
+| 矩阵位置 | 方向 | 位置说明 |
+| --- | --- | --- |
+| N3C | ↑ 上 | 句号右侧第一个位置 |
+| N3D | ↓ 下 | 句号右侧第二个位置 |
+| N4C | ← 左 | N3C 正下方 |
+| N4D | → 右 | N3D 正下方 |
+
+这四个位置在 NAV、NUM 等透明位置会沿用基础层方向键。
+
 这些层键除 Enter 外使用 ZMK 默认 200 毫秒判定；Enter 使用独立的 300 毫秒判定，给正常短按留出更多时间，减少较慢的短按被误判为切层。按住层键进入对应层，松开回到原层。
 
 **当前只有 NUM、NAV 和 GAME 配置了专用键位。SYM、FUN、MEDIA、MOUSE 全部透明，按住后仍沿用下层按键，没有符号、F1–F12、音量或鼠标操作。** `CONFIG_ZMK_POINTING=y` 只启用支持，不会自动生成鼠标键位。
@@ -55,8 +66,8 @@
 | 0 | — · Q · — · — · — · — · — | — · — · — · — · — · SEMI · — |
 | 1 | — · A / LGUI · W · E · R · T · TAB / MEDIA | BSLH / FUN · Y · U · I · O · P / RGUI · — |
 | 2 | — · Z · S / LALT · D / LCTRL · F / LSHIFT · G · — | — · H · J / RSHIFT · K / RCTRL · L / RALT · FSLH / RGUI · — |
-| 3 | — · — · X · C · V · B · — | — · N · M · COMMA · DOT · — · — |
-| 4 | — · — · — · — · SPACE / NUM · ESC / NAV · — | — · Enter / SYM · BSPC / MOUSE · — · — · — · — |
+| 3 | — · — · X · C · V · B · — | — · N · M · COMMA · DOT · UP · DOWN |
+| 4 | — · — · — · — · SPACE / NUM · ESC / NAV · — | — · Enter / SYM · BSPC / MOUSE · — · — · LEFT · RIGHT |
 
 ## 4. NAV 导航层
 
@@ -144,6 +155,7 @@ GAME 的字母均为普通按键，不带字母区长按修饰。Enter 仍然短
 
 | 操作 | 预期结果 |
 | --- | --- |
+| 基础层直接按 N3C / N3D / N4C / N4D | 光标依次向上 / 下 / 左 / 右移动，按住可重复 |
 | Enter 短按 10 次，每次间隔约 200 毫秒 | 正好 10 个换行 |
 | Enter 快速短按 3 次，随后按住 2 秒 | 只有前面 3 个换行；按住期间不继续换行 |
 | Enter 单独按住 2 秒再松开 | 不换行，松开后继续正常输入 |
